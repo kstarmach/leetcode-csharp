@@ -29,22 +29,4 @@ public class Problem_2236_RootEqualsSumofChildren_Test
         var result = solution.RootEqualsSumofChildren(root);
         Assert.IsFalse(result);
     }
-
-    [TestMethod]
-    public void RootEqualsSumofChildren_OneChildIsNull()
-    {
-        var root = TestHelper.GenerateTree(new int?[] { 10, 4, null });
-        var solution = new Problem_2236_RootEqualsSumofChildren();
-        var result = solution.RootEqualsSumofChildren(root);
-        Assert.IsFalse(result);
-    }
-
-    [TestMethod]
-    public void RootEqualsSumofChildren_RootIsNull()
-    {
-        var root = TestHelper.GenerateTree(new int?[] { null, 4, 12 });
-        var solution = new Problem_2236_RootEqualsSumofChildren();
-        var result = solution.RootEqualsSumofChildren(root);
-        Assert.IsFalse(result);
-    }
 }
