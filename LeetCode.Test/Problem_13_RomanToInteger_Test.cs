@@ -1,12 +1,12 @@
 namespace LeetCode.Test;
 
 [TestClass]
-public class _013_RomanToInteger_Test
+public class Problem_13_RomanToInteger_Test
 {
     [TestMethod]
     public void RomanToIntTest_LessThan10()
     {
-        var solution = new _013_RomanToInteger();
+        var solution = new Problem_13_RomanToInteger();
 
         var result = solution.RomanToInt("I");
         Assert.AreEqual(1, result);
@@ -27,7 +27,7 @@ public class _013_RomanToInteger_Test
     [TestMethod]
     public void RomanToIntTest_LessThan100()
     {
-        var solution = new _013_RomanToInteger();
+        var solution = new Problem_13_RomanToInteger();
 
         var result = solution.RomanToInt("X");
         Assert.AreEqual(10, result);
@@ -48,7 +48,7 @@ public class _013_RomanToInteger_Test
     [TestMethod]
     public void RomanToIntTest_LessThan1000()
     {
-        var solution = new _013_RomanToInteger();
+        var solution = new Problem_13_RomanToInteger();
 
         var result = solution.RomanToInt("C");
         Assert.AreEqual(100, result);
@@ -69,7 +69,7 @@ public class _013_RomanToInteger_Test
     [TestMethod]
     public void RomanToIntTest_LessThan4000()
     {
-        var solution = new _013_RomanToInteger();
+        var solution = new Problem_13_RomanToInteger();
 
         var result = solution.RomanToInt("M");
         Assert.AreEqual(1000, result);
