@@ -3,6 +3,30 @@ namespace LeetCode.Test
     public static class AssertHelper
     {
 
+        public static void AssertList<T>(T[] expected, IList<T> actual)
+        {
+            Assert.AreEqual(expected.Length, actual.Count, message: "length is not match");
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.AreEqual(expected[i], actual[i], message: $"i {i} is not match");
+            }
+        }
+
+        public static void AssertList<T>(IList<IList<T>> expected, IList<IList<T>> actual)
+        {
+            Assert.AreEqual(expected.Count, actual.Count, message: "length is not match");
+
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i].Count, actual[i].Count, message: $"row {i} length is not match");
+                for (int j = 0; j < expected[i].Count; j++)
+                {
+                    Assert.AreEqual(expected[i][j], actual[i][j], message: $"i {i}, j {j} is not match");
+                }
+            }
+        }
+
         public static void AssertArray<T>(T[] expected, T[] actual, bool ignoreLength = false)
         {
             if (!ignoreLength)
@@ -45,7 +69,7 @@ namespace LeetCode.Test
                 }
             }
         }
-        
+
         public static void AssertTree(int?[] expected, TreeNode actual)
         {
             if (expected == null || expected.Length == 0) Assert.IsNull(actual);
