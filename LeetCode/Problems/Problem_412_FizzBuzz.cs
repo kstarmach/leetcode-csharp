@@ -8,22 +8,24 @@ public class Problem_412_FizzBuzz
 
         for (int i = 1; i <= n; i++)
         {
-            if (i % 3 == 0 && i % 5 == 0)
+            string str = string.Empty;
+
+            if (i % 3 == 0)
             {
-                result.Add("FizzBuzz");
+                str += "Fizz";
             }
-            else if (i % 3 == 0)
+
+            if (i % 5 == 0)
             {
-                result.Add("Fizz");
+                str += "Buzz";
             }
-            else if (i % 5 == 0)
+
+            if (string.IsNullOrEmpty(str))
             {
-                result.Add("Buzz");
+                str = i.ToString();
             }
-            else
-            {
-                result.Add(i.ToString());
-            }
+
+            result.Add(str);
         }
 
         return result;
