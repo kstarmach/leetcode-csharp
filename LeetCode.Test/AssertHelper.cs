@@ -2,6 +2,50 @@ namespace LeetCode.Test
 {
     public static class AssertHelper
     {
+
+        public static void AssertArray<T>(T[] expected, T[] actual, bool ignoreLength = false)
+        {
+            if (!ignoreLength)
+            {
+                Assert.AreEqual(expected.Length, actual.Length, message: "length is not match");
+            }
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.AreEqual(expected[i], actual[i], message: $"i {i} is not match");
+            }
+        }
+
+        public static void AssertArray<T>(T[,] expected, T[,] actual)
+        {
+            var rowCount = expected.GetLength(0);
+            var colCount = expected.GetLength(1);
+
+            for (int i = 0; i < rowCount; i++)
+            {
+                for (int j = 0; j < colCount; j++)
+                {
+                    Assert.AreEqual(expected[i, j], actual[i, j], message: $"i {i}, j {j} is not match");
+                }
+            }
+        }
+
+        public static void AssertArray<T>(T[][] expected, T[][] actual)
+        {
+            Assert.AreEqual(expected.Length, actual.Length, message: "length is not match");
+
+            var rowCount = expected.Length;
+            var colCount = expected[0].Length;
+
+            for (int i = 0; i < rowCount; i++)
+            {
+                for (int j = 0; j < colCount; j++)
+                {
+                    Assert.AreEqual(expected[i][j], actual[i][j], message: $"i {i}, j {j} is not match");
+                }
+            }
+        }
+        
         public static void AssertTree(int?[] expected, TreeNode actual)
         {
             if (expected == null || expected.Length == 0) Assert.IsNull(actual);

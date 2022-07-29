@@ -1,7 +1,7 @@
 namespace LeetCode.Test;
 
 [TestClass]
-public class Problem_2236_RootEqualsSumofChildren_Test
+public class Test_2236_RootEqualsSumofChildren
 {
     [TestMethod]
     public void RootEqualsSumofChildren_TrueStatement()

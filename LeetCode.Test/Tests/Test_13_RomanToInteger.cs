@@ -1,7 +1,7 @@
 namespace LeetCode.Test;
 
 [TestClass]
-public class Problem_13_RomanToInteger_Test
+public class Test_13_RomanToInteger
 {
     [TestMethod]
     public void RomanToIntTest_LessThan10()

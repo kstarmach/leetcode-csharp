@@ -1,7 +1,7 @@
 namespace LeetCode.Test;
 
 [TestClass]
-public class Problem_2235_AddTwoIntegers_Test
+public class Test_2235_AddTwoIntegers
 {
     [TestMethod]
     public void AddTwoIntegers_PositiveNumbers()
