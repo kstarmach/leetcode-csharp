@@ -1,6 +1,6 @@
 namespace LeetCode;
 
-public class Poblem_1337_TheKWeakestRowsinaMatrix
+public class Problem_1337_TheKWeakestRowsinaMatrix
 {
     public int[] KWeakestRows(int[][] mat, int k)
     {

@@ -6,7 +6,7 @@ public class Test_1337_TheKWeakestRowsinaMatrix
     [TestMethod]
     public void TheKWeakestRowsinaMatrix_Test1()
     {
-        var solution = new Poblem_1337_TheKWeakestRowsinaMatrix();
+        var solution = new Problem_1337_TheKWeakestRowsinaMatrix();
 
         var result = solution.KWeakestRows(
             new int[][] {
@@ -23,7 +23,7 @@ public class Test_1337_TheKWeakestRowsinaMatrix
     [TestMethod]
     public void TheKWeakestRowsinaMatrix_Test2()
     {
-        var solution = new Poblem_1337_TheKWeakestRowsinaMatrix();
+        var solution = new Problem_1337_TheKWeakestRowsinaMatrix();
 
         var result = solution.KWeakestRows(
             new int[][] {
