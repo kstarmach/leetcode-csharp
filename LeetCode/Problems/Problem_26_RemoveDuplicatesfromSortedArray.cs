@@ -2,22 +2,21 @@ namespace LeetCode;
 
 public class Problem_26_RemoveDuplicatesfromSortedArray
 {
-    public int RemoveDuplicates(int[] nums)
+    public int RemoveDuplicates(int[] nums) 
     {
-        List<int> temp = new List<int>();
-
-        int i = 0;
-        foreach (var item in nums)
+        if(nums.Length <= 1) return nums.Length;
+        
+        int index = 0;
+        int last_value = nums[index];
+        
+        for(int i = 0; i < nums.Length; i++)
         {
-            if (!temp.Contains(item))
-            {
-                temp.Add(item);
-                nums[i] = item;
-                i++;
-            }
+            if(nums[i] == last_value) continue;
+            
+            nums[++index] = nums[i];
+            last_value = nums[index];
         }
-
-        return i;
-
+        
+        return index + 1;
     }
 }
