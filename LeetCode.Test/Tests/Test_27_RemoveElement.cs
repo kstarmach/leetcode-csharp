@@ -30,7 +30,7 @@ public class Test_27_RemoveElement
         var result = solution.RemoveElement(input, 3);
 
         Assert.AreEqual(4, result);
-        AssertHelper.AssertArray(new int[] { 1, 2, 5, 4 }, input, true);
+        AssertHelper.AssertArray(new int[] { 1, 2, 4, 5 }, input, true);
     }
 
     [TestMethod]
@@ -74,7 +74,7 @@ public class Test_27_RemoveElement
         var result = solution.RemoveElement(input, 3);
 
         Assert.AreEqual(4, result);
-        AssertHelper.AssertArray(new int[] { 1, 2, 5, 4 }, input, true);
+        AssertHelper.AssertArray(new int[] { 1, 2, 4, 5 }, input, true);
     }
 
     [TestMethod]
